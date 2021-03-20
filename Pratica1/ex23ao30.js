@@ -27,10 +27,24 @@ const meuPinguim = {
     autor:["Tom McGrath"]
    }
 console.log("Olá, sou um pinguim e meu nome é: "+ meuPinguim.nome);
-    const meuPinguim = {
-    //podeVoar = false
-    emitirsom:function(){
-        return "CHIRP CHIRP!";
+    meuPinguim.podeVoar = false
+    meuPinguim.emitirSom = function emitirSom() {
+        console.log("CHIRP CHIRP! É assim que os pinguins se parecem?")
     }
- }
-    console.log(meuPinguim.emitirsom);
+    meuPinguim.emitirSom();
+    meuPinguim.fly = function fly() {
+        if (meuPinguim.podeVoar) {
+        console.log("Eu posso voar!")
+        }else{
+        console.log("Eu não posso voar!");
+    }
+}
+meuPinguim.fly();
+console.log("propriedade do Objeto meuPinguim :");
+for (let propriedade in meuPinguim) {
+         console.log(propriedade);
+    }
+    console.log("Valor de cada propriedade do Objeto meuPinguin: ");
+    for (let propriedade in meuPinguim) {
+      console.log("meuPinguin." + propriedade+ " = " + meuPinguim[propriedade]);
+    }
